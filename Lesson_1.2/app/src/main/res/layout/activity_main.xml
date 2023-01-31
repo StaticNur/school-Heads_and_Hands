@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-65dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edittext_browser"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="link"
+                android:textColorHint="#979797"
+                android:padding="10dp"
+                android:background="@drawable/edittext_border"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_search"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_rounding"
+                android:text="search browser"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/invalid_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="#ff0000" />
+
+
+            <EditText
+                android:id="@+id/edittext_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="80dp"
+                android:hint="email"
+                android:textColorHint="#979797"
+                android:padding="10dp"
+                android:background="@drawable/edittext_border"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_email"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_rounding"
+                android:text="go to email"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/invalid_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="#ff0000" />
+
+
+            <EditText
+                android:id="@+id/edittext_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:hint="phone number"
+                android:textColorHint="#979797"
+                android:padding="10dp"
+                android:background="@drawable/edittext_border"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_phone"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_rounding"
+                android:text="call"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/invalid_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="#ff0000" />
+
+
+            <EditText
+                android:id="@+id/edittext_map"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="70dp"
+                android:textColorHint="#979797"
+                android:hint="54.17027, 45.18967"
+                android:padding="10dp"
+                android:background="@drawable/edittext_border"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button_map"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_rounding"
+                android:text="search map"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/invalid_coordinate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:textColor="#ff0000" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

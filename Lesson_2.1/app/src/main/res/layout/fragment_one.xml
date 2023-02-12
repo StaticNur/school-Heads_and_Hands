@@ -1,0 +1,36 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".FragmentOne">
+
+    <LinearLayout
+        android:id="@+id/ll_fragment_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Message"
+            android:textColor="@color/black"
+            android:textSize="32sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_enter"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="55dp"
+            android:textSize="18sp"
+            android:background="@drawable/button_color"
+            android:text="Enter" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lesson_24.adapter.RecyclerAdapter
 
-class Fragment_life: Fragment() {
+class FragmentLife : Fragment() {
     val array = ArrayList<String>()
-    var recyclerView_fragment: RecyclerView? = null
-    val TAG = Fragment_life::class.java.toString()
+    var recyclerViewFragment: RecyclerView? = null
+    val TAG = FragmentLife::class.java.toString()
 
 
     override fun onAttach(context: Context) {
@@ -22,11 +22,13 @@ class Fragment_life: Fragment() {
         array.add("onAttach")
         Log.d(TAG, "Fragment: onAttach")
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         array.add("onCreate")
         Log.d(TAG, "Fragment: onCreate")
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -41,18 +43,18 @@ class Fragment_life: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView_fragment = view.findViewById(R.id.recyclerView_fragment)
-        recyclerView_fragment!!.setLayoutManager(GridLayoutManager(context,1))
+        recyclerViewFragment = view.findViewById(R.id.recyclerView_fragment)
+        recyclerViewFragment!!.layoutManager = GridLayoutManager(context, 1)
 
         array.add("onViewCreated")
         Log.d(TAG, "Fragment: onViewCreated")
         refreshAdapter(array)
     }
+
     fun refreshAdapter(arr: ArrayList<String>) {
         val adaptor = context?.let { RecyclerAdapter(it, arr) }
-        recyclerView_fragment!!.adapter = adaptor
+        recyclerViewFragment!!.adapter = adaptor
     }
-
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -116,6 +118,4 @@ class Fragment_life: Fragment() {
         Log.d(TAG, "Fragment: onDetach")
         refreshAdapter(array)
     }
-
-
 }

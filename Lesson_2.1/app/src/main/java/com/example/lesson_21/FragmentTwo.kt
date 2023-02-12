@@ -12,7 +12,8 @@ import androidx.fragment.app.FragmentTransaction
 
 class FragmentTwo : Fragment() {
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_two, container, false)
@@ -22,19 +23,19 @@ class FragmentTwo : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val et_message = view.findViewById<EditText>(R.id.et_message)
-        et_message.setText(requireArguments().getString("ID"))
-        val bundle = this.arguments
+        val bundle = arguments
         et_message.setText(bundle!!.getString("ID"))
 
         val btn_save = view.findViewById<Button>(R.id.button_save)
         btn_save.setOnClickListener{
-            val f: Fragment = FragmentOne()
+            val fragment: Fragment = FragmentOne()
             val bundle = Bundle()
             bundle.putString("ID", et_message.text.toString())
-            f.arguments = bundle
+            fragment.arguments = bundle
             val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
-            ft.replace(R.id.fragment, f)
-            ft.commit()
+            ft.replace(R.id.container, fragment)
+                //.addToBackStack("myStack")
+                .commit()
         }
     }
 

@@ -13,7 +13,7 @@ import com.example.lesson_24.adapter.RecyclerAdapter
 
 class MainActivity : AppCompatActivity() {
     val array = ArrayList<String>()
-    var recyclerView_activity: RecyclerView? = null
+    var recyclerViewActivity: RecyclerView? = null
     val TAG = MainActivity::class.java.toString()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
     }
     fun InitVeiw() {
         val contex: Context = this
-        recyclerView_activity = findViewById(R.id.recyclerView_activity)
-        recyclerView_activity!!.setLayoutManager(GridLayoutManager(contex,1))
+        recyclerViewActivity = findViewById(R.id.recyclerView_activity)
+        recyclerViewActivity!!.layoutManager = GridLayoutManager(contex,1)
 
         array.add("onCreate")
         Log.d(TAG, "Activity: onCreate")
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun refreshAdapter(arr: ArrayList<String>) {
         val adaptor = RecyclerAdapter(this, arr)
-        recyclerView_activity!!.adapter = adaptor
+        recyclerViewActivity!!.adapter = adaptor
     }
 
     override fun onAttachFragment(fragment: Fragment?) {

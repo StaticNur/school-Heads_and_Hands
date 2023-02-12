@@ -24,49 +24,60 @@ class MainActivity : AppCompatActivity() {
         val btn2 = findViewById<Button>(R.id.second)
         val btn3 = findViewById<Button>(R.id.third)
 
-        btnA.setOnClickListener{ onClickA() }
-        btnB.setOnClickListener{ onClickB() }
-        btnC.setOnClickListener{ onClickC() }
+        btnA.setOnClickListener { onClickA() }
+        btnB.setOnClickListener { onClickB() }
+        btnC.setOnClickListener { onClickC() }
 
-        btn1.setOnClickListener{ onClick1() }
-        btn2.setOnClickListener{ onClick2() }
-        btn3.setOnClickListener{ onClick3() }
+        btn1.setOnClickListener { onClick1() }
+        btn2.setOnClickListener { onClick2() }
+        btn3.setOnClickListener { onClick3() }
     }
-    fun onClick1(){
+
+    fun onClick1() {
         val f1 = Fragment_1()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
         ft.replace(R.id.container_number, f1)
-        ft.commit()
-    }
-    fun onClick2(){
-        val f2 = Fragment_2()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.container_number, f2)
-        ft.commit()
-    }
-    fun onClick3(){
-        val f3 = Fragment_3()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
-        ft.replace(R.id.container_number, f3)
-        ft.commit()
+            //.addToBackStack("MyStack")
+            .commit()
     }
 
-    fun onClickA(){
+    fun onClick2() {
+        val f2 = Fragment_2()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.container_number, f2)
+            //.addToBackStack("MyStack")
+            .commit()
+    }
+
+    fun onClick3() {
+        val f3 = Fragment_3()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.container_number, f3)
+            //.addToBackStack("MyStack")
+            .commit()
+    }
+
+    fun onClickA() {
         val f1 = Fragment_a()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
         ft.replace(R.id.container_letter, f1)
-        ft.commit()
+            //.addToBackStack("MyStack")
+            .commit()
     }
-    fun onClickB(){
+
+    fun onClickB() {
         val f2 = Fragment_b()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
         ft.replace(R.id.container_letter, f2)
-        ft.commit()
+            //.addToBackStack("MyStack")
+            .commit()
     }
-    fun onClickC(){
+
+    fun onClickC() {
         val f3 = Fragment_c()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
         ft.replace(R.id.container_letter, f3)
-        ft.commit()
+            //.addToBackStack("MyStack")
+            .commit()
     }
 }

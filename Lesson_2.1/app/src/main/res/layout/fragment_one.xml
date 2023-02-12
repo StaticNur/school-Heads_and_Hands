@@ -27,9 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginTop="55dp"
-            android:textSize="18sp"
             android:background="@drawable/button_color"
-            android:text="Enter" />
+            android:text="Enter"
+            android:textSize="18sp" />
     </LinearLayout>
 
 

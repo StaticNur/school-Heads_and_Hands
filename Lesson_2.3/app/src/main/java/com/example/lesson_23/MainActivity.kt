@@ -16,32 +16,29 @@ class MainActivity : AppCompatActivity() {
         val btn2 = findViewById<Button>(R.id.second)
         val btn3 = findViewById<Button>(R.id.third)
 
-        btn1.setOnClickListener{
-            onClick1()
-        }
-        btn2.setOnClickListener{
-            onClick2()
-        }
-        btn3.setOnClickListener{
-            onClick3()
-        }
+        btn1.setOnClickListener { onClick1() }
+        btn2.setOnClickListener { onClick2() }
+        btn3.setOnClickListener { onClick3() }
     }
-    fun onClick1(){
+    fun onClick1() {
         val f1 = Fragment_1()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
         ft.replace(R.id.container, f1)
-        ft.commit()
+            //.addToBackStack("MyStack")
+            .commit()
     }
-    fun onClick2(){
+    fun onClick2() {
         val f2 = Fragment_2()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
         ft.replace(R.id.container, f2)
-        ft.commit()
+            //.addToBackStack("MyStack")
+            .commit()
     }
-    fun onClick3(){
+    fun onClick3() {
         val f3 = Fragment_3()
-        val ft:FragmentTransaction = supportFragmentManager.beginTransaction()
+        val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
         ft.replace(R.id.container, f3)
-        ft.commit()
+            //.addToBackStack("MyStack")
+            .commit()
     }
 }

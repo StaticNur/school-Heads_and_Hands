@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Material_design" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/smalt</item>
+        <item name="colorPrimaryVariant">@color/smalt</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/smalt</item>
+        <item name="colorSecondaryVariant">@color/smalt</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black_20pc</item>
+        <item name="android:navigationBarColor">@color/white_50pc</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Base.V27.Theme.Material_design" parent="Theme.Material3.DayNight.NoActionBar" >
+        <item name="android:statusBarColor">@color/black_20pc</item>
+    </style>
+
+    <style name="Theme.Cowboys" parent="Base.V27.Theme">
+        <item name="android:statusBarColor">@color/black_20pc</item>
+        <item name="colorPrimary">@color/smalt</item>
+        <item name="textInputStyle">@style/Theme.Cowboys.TextInputLayout</item>
+        <item name="buttonStyle">@style/Theme.Cowboys.Button</item>
+    </style>
+</resources>

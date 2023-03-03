@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">Material_design</string>
+
+    <string name="sign_in" translatable="false">Войти</string>
+    <string name="sign_in_login_hint" translatable="false">Логин</string>
+    <string name="sign_in_password_hint" translatable="false">Пароль</string>
+</resources>

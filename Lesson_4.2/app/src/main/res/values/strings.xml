@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MVVM</string>
+    <string name="text_view_info_message_loading">Идёт загрузка данных...</string>
+    <string name="error_get_authors">Произошла ошибка в запросе getAuthors()</string>
+    <string name="error_get_books">Произошла ошибка в запросе getBooks()</string>
+    <string name="error_get_availability">Произошла ошибка в запросе getAvailability()</string>
+    <string name="repeat">Повторить</string>
+</resources>
